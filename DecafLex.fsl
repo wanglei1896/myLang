@@ -1,0 +1,32 @@
+{
+moudle DecafLex
+
+let keywords s=
+    match s with
+    | "bool"		->BOOL
+    | "break"		->BREAK
+    | "class"		->CLASS
+    | "double"		->DOUBLE
+    | "else"		->ELSE
+    | "extends"		->EXTENDS
+    | "for"		->FOR
+    | "false"		->CSTBOOL 0
+    | "if"		->IF
+    | "int"		->INT
+    | "new"		->NEW
+    | "null"		->NULL
+    | "return"		->RETURN
+    | "string"		->STRING
+    | "this"		->THIS
+    | "true"		->CSTBOOL 1
+    | "void"		->VOID
+    | "while"		->WHILE
+    | "Print"		->PRINT
+    | "ReadInteger"	->READINTEGER
+    | "ReadLine"	->READLINE
+    | _			->NAME s
+
+}
+
+rule Token=parse
+  |
